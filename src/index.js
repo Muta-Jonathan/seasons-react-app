@@ -13,7 +13,7 @@ class App extends React.Component {
     );
   }
 
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -22,6 +22,10 @@ class App extends React.Component {
       return <SeasonDisplay latitude={this.state.lat} />;
     }
     return <Spinner message="Please ' Allow ' Location Request!" />;
+  }
+
+  render() {
+    return this.renderContent();
   }
 }
 

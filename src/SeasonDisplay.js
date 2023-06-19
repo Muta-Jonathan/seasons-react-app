@@ -1,9 +1,10 @@
-import "./SeasonDisplay.css";
 import React from "react";
+import "./SeasonDisplay.css";
+import ShowCurrentTime from "./ShowCurrentTime";
 
 const seasonConfig = {
   summer: { text: "Let's hit the beach 🏖️!", iconName: "sun" },
-  winter: { text: "Buur, it is chilly 🥶", iconName: "snowflake" },
+  winter: { text: "Buur, it is chilly 🥶", iconName: "train" },
 };
 
 const getSeason = (latitude, month) => {
@@ -22,6 +23,7 @@ const SeasonDisplay = (props) => {
     <div className={`season-display ${season}`}>
       <i className={`icon-left massive ${iconName} icon`} />
       <h1>{text}</h1>
+      <ShowCurrentTime />
       <i className={`icon-right massive ${iconName} icon`} />
     </div>
   );

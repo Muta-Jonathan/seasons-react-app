@@ -11,19 +11,24 @@
 }
 
 .season-display.winter i {
-  color: steelblue;
+  color: cornflowerblue;
 }
 
-.season-display.summer i {
+.season-display.summer i,
+.current-time {
   color: orange;
 }
 
-.season-display h1 {
+.season-display.summer h1 {
   color: whitesmoke;
 }
 
+.season-display.winter h1 {
+  color: cornflowerblue;
+}
 .season-display {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
